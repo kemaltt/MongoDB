@@ -74,7 +74,7 @@ const Movie = mongoose.model('Movie', movieSchema)
 
 // Movie.find({
 //         rating: {
-//             $gte: 9 
+//             $gte: 9
 //         }
 //     })
 //     .then(data => console.log(data))
@@ -96,6 +96,43 @@ const Movie = mongoose.model('Movie', movieSchema)
 //     .then(data => console.log(data))
 //     .catch(err => console.log(err))
 
-Movie.findById('6249c53c5d93e34bdfb99d20')
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+// Movie.findById('6249c53c5d93e34bdfb99d20')
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Update------------------------------
+
+// Movie.updateOne({
+//         name: 'Iron man'
+//     }, {
+//         name: 'Iron Man'
+//     }).then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Movie.updateMany({
+//         name: {
+//             $in: ['The Avengers', 'Iron Man']
+//         }
+//     }, {
+//         rating: 10
+//     }).then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Movie.findOneAndUpdate({ name: 'The Avengers' }, { popularity: 500 }, { new: true })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Movie.findByIdAndUpdate('6249bfd2b9ebb19e5943f31e', { rating: 8 }, { new: true })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Delete----------------------------------------------------
+// Movie.deleteMany({ rating: { $gte: 8 } })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+// Movie.findOneAndDelete({
+//         name: 'Cast Away'
+//     })
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
